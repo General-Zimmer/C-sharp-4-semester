@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Get))
+{
+    @Html.DropDownList("Country")
+    <input type="submit" value="Show country code" />
+
+}
+
+@if (ViewBag.CountryCode != null)
+{
+    <strong>Country code: </strong>@ViewBag.CountryCode
+}

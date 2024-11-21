@@ -1,0 +1,36 @@
+﻿@using DTO.Model;
+
+@model Employee
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>GetEmployee</title>
+</head>
+<body>
+    <div>
+        @{
+            String action = "";
+        }
+        @if (Model == null)
+        {
+            action = "AddEmployee";
+        }
+        else
+        {
+            action = "";
+        }
+        @using (Html.BeginForm("Employee", action))
+        {
+            @Html.EditorForModel()
+            
+            <button name="" type="submit">OK</button>
+        }
+    </div>
+</body>
+</html>
