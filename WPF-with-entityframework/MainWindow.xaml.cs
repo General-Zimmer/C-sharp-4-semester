@@ -13,7 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using DAL2.DAL;
+using BLL2;
+using DTO2.models;
 
 namespace WPF_with_entityframework
 {
@@ -22,23 +23,22 @@ namespace WPF_with_entityframework
     /// </summary>
     public partial class MainWindow : Window
     {
-        DataofTheBase data;
         public MainWindow()
         {
             InitializeComponent();
-
-            data = new DataofTheBase();
-            data.Biler.Load();
-
+            foreach (var bil in BLL.GetBiller())
+            {
+                ListBox.Items.Add(bil);
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            var id = txtID.Text;
 
-            foreach (var bil in data.Biler)
-            {
-                ListBox.Items.Add(bil);
-            }
+            Bill bill = BLL.getBill(int.Parse(id));
+            ListBox.Items.Clear();
+            ListBox.Items.Add(bill);
         }
     }
 }

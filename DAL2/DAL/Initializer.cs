@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using DAL2.models;
 
 namespace DAL2.DAL
 {
@@ -11,9 +12,9 @@ namespace DAL2.DAL
     {
         protected override void Seed(DataofTheBase context)
         {
-            context.Biler.Add(new BLL2.models.Bill { id = 1, Name = "Audi", weight = 1500, diesel = true });
-            context.Biler.Add(new BLL2.models.Bill { id = 2, Name = "BMW", weight = 1700, diesel = true });
-            context.Biler.Add(new BLL2.models.Bill { id = 3, Name = "VOLVO", weight = 1200, diesel = false });
+            context.Biler.Add(new Bill { id = 1, Name = "Audi", weight = 1500, diesel = true });
+            context.Biler.Add(new Bill { id = 2, Name = "BMW", weight = 1700, diesel = true });
+            context.Biler.Add(new Bill { id = 3, Name = "VOLVO", weight = 1200, diesel = false });
             context.SaveChanges();
         }
 

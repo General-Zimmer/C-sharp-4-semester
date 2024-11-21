@@ -110,9 +110,9 @@
       <Project>{ed4722f0-789a-47ca-9436-1a905ad55210}</Project>
       <Name>BLL2</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DAL2\DAL2.csproj">
-      <Project>{c6ee5de8-eaeb-4776-8c6f-a5d5b69f8781}</Project>
-      <Name>DAL2</Name>
+    <ProjectReference Include="..\DTO2\DTO2.csproj">
+      <Project>{c394803c-06ca-43a3-a80a-3e3ab0944797}</Project>
+      <Name>DTO2</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,0 +1,22 @@
+﻿@model DTO2.models.Bill
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<main>
+    <section class="row" aria-labelledby="aspnetTitle">
+        <h1 id="title">Bill app!</h1>
+        <ul>
+            @foreach (var bill in @ViewBag.biller)
+            {
+                <li>@bill.Name</li>
+            }
+        </ul>
+    </section>
+
+    <div class="row">
+        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
+           
+        </section>
+    </div>
+</main>

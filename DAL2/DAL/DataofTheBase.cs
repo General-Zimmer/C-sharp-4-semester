@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Data;
-using BLL2.models;
+using DAL2.models;
+
 
 namespace DAL2.DAL
 {

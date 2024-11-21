@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C6EE5DE8-EAEB-4776-8C6F-A5D5B69F8781}</ProjectGuid>
+    <ProjectGuid>{C394803C-06CA-43A3-A80A-3E3AB0944797}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DAL2</RootNamespace>
-    <AssemblyName>DAL2</AssemblyName>
+    <RootNamespace>DTO2</RootNamespace>
+    <AssemblyName>DTO2</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -51,10 +51,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL\DataofTheBase.cs" />
-    <Compile Include="DAL\Initializer.cs" />
+    <Compile Include="Mappers.cs" />
     <Compile Include="models\Bill.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL2\DAL2.csproj">
+      <Project>{c6ee5de8-eaeb-4776-8c6f-a5d5b69f8781}</Project>
+      <Name>DAL2</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
